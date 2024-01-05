@@ -33,4 +33,11 @@ public class RomanNumeralTest {
         int result = roman.convert("XLIV");
         Assertions.assertEquals(44, result);
     }
+
+    @Test       //This test case should fail
+    public void numberWithWrongInput() {
+        RomanNumeral roman = new RomanNumeral();
+        int result = roman.convert("VX");
+        Assertions.assertEquals(15, result);
+    }
 }
